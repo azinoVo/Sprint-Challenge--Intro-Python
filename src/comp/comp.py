@@ -27,7 +27,7 @@ print("Starts with D:")
 a = []
 for peeps in humans:
     if peeps.name[0] == "D":
-        a.append(peeps)
+        a.append(peeps.name)
     else:
         pass
 print(a)
@@ -38,7 +38,7 @@ print("Ends with e:")
 b = []
 for peeps in humans:
     if peeps.name[-1] == "e":
-        b.append(peeps)
+        b.append(peeps.name)
     else:
         pass
 print(b)
@@ -49,7 +49,7 @@ print("Starts between C and G, inclusive:")
 c = []
 for peeps in humans:
     if peeps.name[0] == "C" or peeps.name[0] == "D" or peeps.name[0] == "E" or peeps.name[0] == "F" or peeps.name[0] == "G":
-        c.append(peeps)
+        c.append(peeps.name)
     else:
         pass
 print(c)
@@ -87,7 +87,7 @@ print(f)
 print("All names uppercase and age+5:")
 g = []
 for peeps in humans:
-    g.append((f"{peeps.name.upper()}", peeps.age+5))
+    g.append(Human(peeps.name.upper(), peeps.age+5))
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
